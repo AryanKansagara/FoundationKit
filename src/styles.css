@@ -1,0 +1,24 @@
+:root {
+  --fk-text: #172033;
+  --fk-muted: #46536b;
+  --fk-primary: #1746a2;
+  --fk-error: #a31529;
+  --fk-border: #69758a;
+  --fk-radius: .375rem;
+  --fk-space: .5rem;
+}
+.fk-button, .fk-input { font: inherit; border-radius: var(--fk-radius); padding: .625rem .875rem; border: 1px solid var(--fk-border); }
+.fk-button { cursor: pointer; min-height: 44px; margin-block: var(--fk-space); }
+.fk-button--primary { color: white; background: var(--fk-primary); border-color: var(--fk-primary); }
+.fk-button--secondary { color: var(--fk-text); background: white; }
+.fk-button:disabled { opacity: .65; cursor: not-allowed; }
+.fk-button:focus-visible, .fk-input:focus-visible { outline: 3px solid var(--fk-primary); outline-offset: 3px; }
+.fk-field { color: var(--fk-text); display: flex; flex-direction: column; gap: var(--fk-space); margin-block: 1rem; }
+.fk-field label { font-weight: 600; }
+.fk-help, .fk-error { margin: 0; }
+.fk-help { color: var(--fk-muted); }
+.fk-error { color: var(--fk-error); }
+.fk-input[aria-invalid=true] { border-color: var(--fk-error); }
+.fk-notice { color: var(--fk-text); padding: 1rem; border: 1px solid var(--fk-border); border-radius: var(--fk-radius); }
+.fk-notice--error { color: var(--fk-error); border-color: var(--fk-error); }
+@media (forced-colors: active) { .fk-button:focus-visible, .fk-input:focus-visible { outline-color: Highlight; } }
